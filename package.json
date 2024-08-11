@@ -1,9 +1,14 @@
 {
   "name": "ask-codebase",
   "displayName": "Ask My Codebase",
-  "description": "",
-  "publisher": "Esinniobiwa Quareeb",
+  "description": "A VS Code extension to interact with and analyze your codebase, leveraging local analysis or OpenAI for assistance.",
+  "publisher": "muftyoftech",
   "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/esinniobiwaquareeb/Ask-My-Codebase"
+  },
+  "license": "MIT",
   "engines": {
     "vscode": "^1.92.0"
   },
@@ -13,16 +18,13 @@
   "activationEvents": [
     "onCommand:extension.askCodebase"
   ],
-  "webview": {
-    "viewType": "askCodebase"
-  },
   "main": "./dist/extension.js",
   "contributes": {
     "viewsContainers": {
       "activitybar": [
         {
           "id": "askCodebaseSidebar",
-          "title": "Ask Codebase",
+          "title": "Ask My Codebase",
           "icon": "resources/askCodebaseIcon.png"
         }
       ]
@@ -31,7 +33,7 @@
       "askCodebaseSidebar": [
         {
           "id": "askCodebaseView",
-          "name": "Ask Codebase",
+          "name": "Ask My Codebase",
           "type": "webview"
         }
       ]
@@ -68,8 +70,16 @@
   "dependencies": {
     "express": "^4.19.2",
     "express-session": "^1.18.0",
-    "fs": "^0.0.1-security",
     "open": "^10.1.0",
     "openai": "^4.55.4"
-  }
+  },
+  "keywords": [
+    "vscode",
+    "extension",
+    "code analysis",
+    "OpenAI",
+    "chatbot",
+    "codebase",
+    "TypeScript"
+  ]
 }
