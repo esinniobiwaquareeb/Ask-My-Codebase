@@ -572,7 +572,7 @@ async function askChatGPT(question: string): Promise<string> {
 }
 
 async function fixCodeBasedOnSuggestion(suggestion: string, editor: vscode.TextEditor | undefined) {
-    if (!editor) return;
+    if (!editor) {return;}
 
     const document = editor.document;
     const edit = new vscode.WorkspaceEdit();
